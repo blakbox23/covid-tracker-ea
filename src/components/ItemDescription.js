@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function ItemDescription() {
-    return (
-        <div>
-            <p>I am not known </p>
-        </div>
-    )
+  return (
+    <div>
+      <p>I am not known </p>
+    </div>
+  );
 }
 
-export default ItemDescription
+export default ItemDescription;

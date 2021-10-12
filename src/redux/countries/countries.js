@@ -1,23 +1,43 @@
-// export const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-// export const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-// export const GET_BOOK = 'bookStore/books/GET_BOOK';
+/*eslint-disable*/
+export const GET_COUNTRY = 'countries/countries/GET_COUNTRY';
 
-// const initialState = [];
+const initialState = [];
 
-// const reducer = (state = initialState, action) => {
-//   switch (action.type) {
-//     case ADD_BOOK:
-//       return [...state, action.payload];
+export const getCountry = (country) => async (dispatch) => {
+  const data = await fetch(
+    `https://api.covid19tracking.narrativa.com/api/2021-10-12/country/${country}`,
+    { method: 'GET' },
+  );
+  const newData = await data.json();
+  const formattedData = [1];
 
-//     case GET_BOOK:
-//       return action.formattedData;
+  formattedData.push({
+      newConfirmed: newData.total.today_confirmed,
+      newDeath: newData.total.today_deaths,
+});
 
-//     case REMOVE_BOOK:
-//       return state.filter((book) => book.item_id !== action.payload.item_id);
 
-//     default:
-//       return state;
-//   }
-// };
+  //   const formattedData = {
+  //     item_id: country,
+  //     confirmed: newData.total.today_confirmed,
+  //   };
+  dispatch({ type: GET_COUNTRY, formattedData});
+};
 
-// export default reducer;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    // case ADD_BOOK:
+    //   return [...state, action.payload];
+
+    case GET_COUNTRY:
+      return action.formattedData;
+
+      // case REMOVE_BOOK:
+      //   return state.filter((book) => book.item_id !== action.payload.item_id);
+
+    default:
+      return state;
+  }
+};
+
+export default reducer;

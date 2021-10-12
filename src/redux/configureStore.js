@@ -1,15 +1,16 @@
-// import { createStore, combineReducers, applyMiddleware } from 'redux';
-// import logger from 'redux-logger';
-// // import booksReducer from './books/books';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import countryReducer from './countries/countries';
 
-// // const reducer = combineReducers({
-// //   booksReducer,
-// //   // additional reducers could be added here
-// // });
-// //
-// const store = createStore(
-//   reducer,
-//   applyMiddleware(logger),
-// );
+const reducer = combineReducers({
+  countryReducer,
+  // additional reducers could be added here
+});
 
-// export default store;
+const store = createStore(
+  reducer,
+  applyMiddleware(logger, thunk),
+);
+
+export default store;

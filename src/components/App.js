@@ -1,9 +1,9 @@
+import { Route, Switch } from 'react-router-dom';
 import BodyList from './BodyList';
 import Nav from './Nav';
-import { Route, Switch } from 'react-router-dom';
 import ItemDescription from './ItemDescription';
-import Kenya from './countries/Kenya';
-import Tanzania from './countries/Tanzania';
+import Kenya from '../countries/Kenya';
+import Tanzania from '../countries/Tanzania';
 
 function App() {
   return (
@@ -11,13 +11,13 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-        <BodyList />
+          <BodyList />
         </Route>
         <Route path="/kenya">
           <Kenya />
         </Route>
         <Route path="/tanzania">
-          <Tanzania/>
+          <Tanzania />
         </Route>
         <Route path="/uganda">
           <ItemDescription />
