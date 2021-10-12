@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 function BodyItem() {
-    return (
-        <div>
-                        <p>Body BB list</p>
+  return (
+    <div>
+      <p>Body BB list</p>
 
-        </div>
-    )
+    </div>
+  );
 }
 
-export default BodyItem
+export default BodyItem;
