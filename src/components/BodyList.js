@@ -9,8 +9,11 @@ function BodyList() {
   const countries = useSelector((state) => state.data.countries);
   const dispatch = useDispatch();
 
+  const countryStats = useSelector((state) => state.data.countryData);
+
+  console.log('the data is ' + countryStats.id);
   useEffect(() => {
-    console.log('the data is ' + countries[0]);
+    console.log('the data is ' + countryStats);
     dispatch(getCountries());
   }, []);
   return (
@@ -22,6 +25,7 @@ function BodyList() {
             <Link to={`/${country}`}>
               {country}
             </Link>
+            <div>{countryStats[0]}</div>
             </li>
         )
         )}

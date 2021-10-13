@@ -11,16 +11,14 @@ function ItemDescription(props) {
   useEffect(() => {
         dispatch(getCountryData(country));
       }, []);
-      console.log('afterthis line');
-      console.log(countryStats.totalcases)
-      console.log('abovethis line');
   return (
     <div>
     <p>{country}</p>
 
       <div>Total Cases: {countryStats.totalcases}</div>
-      <div>Active Cases: </div>
-      <div>Recovered: </div>
+      <div>Recovered: {countryStats.recovered}</div>
+      <div>Tests: {countryStats.tests}</div>
+    
     </div>
   );
 }
