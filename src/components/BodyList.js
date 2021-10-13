@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCountries } from '../redux/countries/countries';
 import { v4 as uuidv4 } from 'uuid';
+import Nav from './Nav';
 
 function BodyList() {
   const countries = useSelector((state) => state.data.countries);
@@ -16,6 +17,7 @@ function BodyList() {
 
   return (
     <>
+     <Nav txt={'Home Navbar'}/>
       <h1>Africa Covid tracking</h1>
       <ul>
         {countries.map((country) => (

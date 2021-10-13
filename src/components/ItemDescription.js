@@ -1,7 +1,8 @@
 /*eslint-disable*/
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCountryData } from '../redux/countries/countries'
+import { getCountryData } from '../redux/countries/countries';
+import Nav from './Nav';
 
 function ItemDescription(props) {
   const country = props.country
@@ -14,6 +15,7 @@ function ItemDescription(props) {
  
   return (
     <div>
+      <Nav txt={'Details'}/>
     <p>{country}</p>
 
       <div>Total Cases: {countryStats.totalcases}</div>
