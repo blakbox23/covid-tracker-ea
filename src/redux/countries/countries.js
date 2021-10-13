@@ -1,7 +1,11 @@
 /*eslint-disable*/
-export const GET_COUNTRY = 'countries/countries/GET_COUNTRY';
+export const GET_COUNTRIES = 'countries/countries/GET_COUNTRIES';
+export const GET_COUNTRY_DATA = 'countries/countries/GET_COUNTRY_DATA';
 
-const initialState = [];
+const initialState = {
+  countries: [],
+  countryData: [],
+};
 
 export const getCountries = () => async (dispatch) => {
   const data = await fetch(
@@ -10,23 +14,35 @@ export const getCountries = () => async (dispatch) => {
   );
   const newData = await data.json();
 
-  //   const formattedData = {
-  //     item_id: country,
-  //     confirmed: newData.total.today_confirmed,
-  //   };
-  dispatch({ type: GET_COUNTRY, newData});
+  dispatch({ type: GET_COUNTRIES, newData});
 };
+
+export const getCountryData = (country) => async (dispatch) => {
+  const data = await fetch(
+    `https://disease.sh/v3/covid-19/countries/${country}`,
+    { method: 'GET' },
+  );
+  const newData = await data.json();
+//  console.log(newData)
+  const countryData = {
+      id: newData.countryInfo.iso3,
+      totalcases: newData.cases,  
+  };
+
+  console.log(countryData)
+
+  dispatch({ type: GET_COUNTRY_DATA, countryData});
+};
+
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    // case ADD_BOOK:
-    //   return [...state, action.payload];
 
-    case GET_COUNTRY:
-      return action.newData.countries;
+    case GET_COUNTRIES:
+      return {...state, countries: action.newData.countries};
 
-      // case REMOVE_BOOK:
-      //   return state.filter((book) => book.item_id !== action.payload.item_id);
+    case GET_COUNTRY_DATA:
+      return {...state, countryData: action.countryData};;
 
     default:
       return state;

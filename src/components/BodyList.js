@@ -6,7 +6,7 @@ import { getCountries } from '../redux/countries/countries';
 import { v4 as uuidv4 } from 'uuid';
 
 function BodyList() {
-  const countries = useSelector((state) => state.data);
+  const countries = useSelector((state) => state.data.countries);
   const dispatch = useDispatch();
 
   useEffect(() => {

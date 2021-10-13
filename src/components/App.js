@@ -8,7 +8,7 @@ import ItemDescription from './ItemDescription';
 // import Tanzania from '../countries/Tanzania';
 
 function App() {
-  const countries = useSelector((state) => state.data);
+  const countries = useSelector((state) => state.data.countries);
 
   return (
     <>
