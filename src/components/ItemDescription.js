@@ -11,6 +11,7 @@ function ItemDescription(props) {
   useEffect(() => {
         dispatch(getCountryData(country));
       }, []);
+ 
   return (
     <div>
     <p>{country}</p>

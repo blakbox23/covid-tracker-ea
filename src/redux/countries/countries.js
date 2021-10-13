@@ -9,11 +9,12 @@ const initialState = {
 
 export const getCountries = () => async (dispatch) => {
   const data = await fetch(
-    `https://disease.sh/v3/covid-19/continents/africa?strict=true`,
+    `https://corona.lmao.ninja/v2/countries?today=&sort=`,
     { method: 'GET' },
   );
-  const newData = await data.json();
-
+  const bfData = await data.json();
+  const bftrunc = bfData.filter((country) => country.country =='Kenya' ||  country.country =='Tanzania' ||  country.country =='Uganda')
+  const newData = bftrunc.slice(0, 5);
   dispatch({ type: GET_COUNTRIES, newData});
 };
 
@@ -42,7 +43,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
 
     case GET_COUNTRIES:
-      return {...state, countries: action.newData.countries};
+      return {...state, countries: action.newData};
 
     case GET_COUNTRY_DATA:
       return {...state, countryData: action.countryData};;

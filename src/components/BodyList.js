@@ -7,25 +7,23 @@ import { v4 as uuidv4 } from 'uuid';
 
 function BodyList() {
   const countries = useSelector((state) => state.data.countries);
+ 
   const dispatch = useDispatch();
 
-  const countryStats = useSelector((state) => state.data.countryData);
-
-  console.log('the data is ' + countryStats.id);
   useEffect(() => {
-    console.log('the data is ' + countryStats);
     dispatch(getCountries());
   }, []);
+
   return (
     <>
       <h1>Africa Covid tracking</h1>
       <ul>
         {countries.map((country) => (
         <li key={uuidv4()}>
-            <Link to={`/${country}`}>
-              {country}
+            <Link to={`/${country.country}`}>
+              {country.country}
             </Link>
-            <div>{countryStats[0]}</div>
+            <div>{country.cases}</div>         
             </li>
         )
         )}

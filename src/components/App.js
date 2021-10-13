@@ -16,8 +16,8 @@ function App() {
       <Switch>
 
         {countries.map((country) => (
-          <Route path={`/${country}`} key={country}>
-            <ItemDescription country={country} />
+          <Route path={`/${country.country}`} key={country}>
+            <ItemDescription country={country.country} />
           </Route>
         ))}
         <Route exact path="/">
