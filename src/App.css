@@ -14,3 +14,26 @@
   align-items: center;
   padding: 0 3rem;
 }
+
+header {
+  height: 12rem;
+
+  border: 1px solid black;
+  justify-content: space-around;
+}
+
+.africa-img {
+  border: 1px solid black;
+  font-size: 10em;
+}
+
+.header-img {
+  width: 40%;
+}
+
+.header-text {
+  border: 1px solid black;
+  width: 40%;
+  padding-top: 4rem;
+
+}
