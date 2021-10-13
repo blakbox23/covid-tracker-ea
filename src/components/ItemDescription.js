@@ -1,9 +1,11 @@
+/*eslint-disable*/
 import React from 'react';
 
-function ItemDescription() {
+function ItemDescription(props) {
+  
   return (
     <div>
-      <p>I am not known </p>
+      <p>{props.country}</p>
     </div>
   );
 }

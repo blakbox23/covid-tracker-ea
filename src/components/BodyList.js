@@ -1,45 +1,42 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+/*eslint-disable*/
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getCountries } from '../redux/countries/countries';
+import { v4 as uuidv4 } from 'uuid';
 
 function BodyList() {
-  const links = [
-    {
-      id: 1,
-      path: '/',
-      text: '<',
-    },
-    {
-      id: 2,
-      path: '/tanzania',
-      text: 'Tanzania',
-    },
-    {
-      id: 3,
-      path: '/kenya',
-      text: 'Kenya',
-    },
-    {
-      id: 4,
-      path: '/uganda',
-      text: 'uganda',
-    },
-    {
-      id: 3,
-      path: '/rwanda',
-      text: 'rwanda',
-    },
-  ];
+  const countries = useSelector((state) => state.data);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('the data is ' + countries[0]);
+    dispatch(getCountries());
+  }, []);
   return (
-    <div>
-      <ul className="links">
-        {links.map((link) => (
-          <li key={link.id} className="link-item">
-            <NavLink to={link.path} exact>{link.text}</NavLink>
-          </li>
-        ))}
+    <>
+      <h1>Africa Covid tracking</h1>
+      <ul>
+        {countries.map((country) => (
+        <li key={uuidv4()}>
+            <Link to={`/${country}`}>
+              {country}
+            </Link>
+            </li>
+        )
+        )}
       </ul>
 
-    </div>
+      {/* <ul>
+        {data.countries.map((country) => (
+          <li key={region.id}>
+            <Link to={`/${region.id}`}>
+              {region.name}
+            </Link>
+          </li>
+        ))}
+      </ul>   */}
+    </>
   );
 }
 

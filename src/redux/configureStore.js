@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import countryReducer from './countries/countries';
 
 const reducer = combineReducers({
-  countryReducer,
+  data: countryReducer,
   // additional reducers could be added here
 });
 
