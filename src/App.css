@@ -9,22 +9,24 @@
 
 .navbar {
   height: 50px;
-  border-bottom: 1px solid black;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
+  background-color: rgb(142, 142, 202);
+  color: #fff;
+
 }
 
 header {
   height: 12rem;
-
-  border: 1px solid black;
+  background-color: rgb(66, 191, 240);
   justify-content: space-around;
+  color: #fff;
 }
 
 .africa-img {
-  border: 1px solid black;
   font-size: 10em;
+  color: rgb(61, 61, 97);
 }
 
 .header-img {
@@ -32,8 +34,15 @@ header {
 }
 
 .header-text {
-  border: 1px solid black;
   width: 40%;
   padding-top: 4rem;
+}
 
+.title {
+  background-color: rgb(36, 129, 167);
+  padding: 0.2rem;
+  padding-left: 2rem;;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
 }
