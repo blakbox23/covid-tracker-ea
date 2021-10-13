@@ -46,3 +46,48 @@ header {
   font-size: 0.85rem;
   font-weight: bold;
 }
+
+.body-list {
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: rgb(65, 171, 212);
+
+}
+
+.body-item {
+  width: calc(50% - 2px);
+  height: 11rem;
+  border: 1px solid rgb(187, 186, 186);
+}
+
+.body-item-txt {
+  position: relative;
+  top: 1rem;
+ text-align: right;
+ margin-right: 1rem;
+  color:rgb(61, 61, 97);
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+}
+
+.body-item-txt a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.home-cases {
+  margin-top: 0.1rem;
+}
+
+.flag {
+  width: 6rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.flag img{
+  width: 100%;
+  filter: opacity(50%);  
+  filter: drop-shadow(8px 8px 10px green) opacity(70%);
+}

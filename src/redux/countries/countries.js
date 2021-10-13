@@ -13,8 +13,8 @@ export const getCountries = () => async (dispatch) => {
     { method: 'GET' },
   );
   const bfData = await data.json();
-  const bftrunc = bfData.filter((country) => country.country =='Kenya' ||  country.country =='Tanzania' ||  country.country =='Uganda')
-  const newData = bftrunc.slice(0, 5);
+  const bftrunc = bfData.filter((country) => country.continent =='Africa')
+  const newData = bftrunc.slice(0, 20);
   dispatch({ type: GET_COUNTRIES, newData});
 };
 

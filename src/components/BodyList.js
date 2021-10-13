@@ -9,8 +9,8 @@ import { getCountries } from '../redux/countries/countries';
 
 function BodyList() {
   const countries = useSelector((state) => state.data.countries);
-  console.log('countries');
-  console.log(countries);
+  // console.log('countries');
+  // console.log(countries);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,16 +34,22 @@ function BodyList() {
         </div>
       </header>
       <p className="title">COVID NUMBERS IN AFRICA</p>
-      <ul>
+      <div className="body-list flex">
         {countries.map((country) => (
-          <li key={uuidv4()}>
-            <Link to={`/${country.country}`}>
-              {country.country}
-            </Link>
-            <div>{country.cases}</div>
-          </li>
+          <div className="body-item" key={uuidv4()}>
+            <div className="flag">
+              <img src={country.countryInfo.flag} alt="logo-img" className="logo-img" />
+
+            </div>
+            <div className="body-item-txt">
+              <Link to={`/${country.country}`}>
+                {country.country}
+              </Link>
+              <div className="home-cases">{country.cases}</div>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
 
       {/* <ul>
         {data.countries.map((country) => (
