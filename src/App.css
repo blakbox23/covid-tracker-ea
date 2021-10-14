@@ -26,7 +26,7 @@ header {
 
 .africa-img {
   font-size: 10em;
-  color: rgb(61, 61, 97);
+  color: rgb(65, 65, 95);
 }
 
 .header-img {
@@ -45,19 +45,24 @@ header {
   color: #fff;
   font-size: 0.85rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .body-list {
   flex-wrap: wrap;
   margin: auto;
-  background-color: rgb(65, 171, 212);
-
+  background-color: rgb(99, 185, 219);
 }
 
 .body-item {
   width: calc(50% - 2px);
   height: 11rem;
   border: 1px solid rgb(187, 186, 186);
+}
+
+.body-item:nth-child(even) {
+    background-color: rgb(122, 194, 223);
+
 }
 
 .body-item-txt {
@@ -88,6 +93,19 @@ header {
 
 .flag img{
   width: 100%;
-  filter: opacity(50%);  
-  filter: drop-shadow(8px 8px 10px green) opacity(70%);
+  filter: drop-shadow(8px 8px 10px green) opacity(80%);
+}
+
+.stats-list {
+  background-color: rgb(101, 191, 226);
+  color: #fff;
+}
+
+.stats-list-item {
+  padding: 1rem 1rem;
+  justify-content: space-between;
+}
+
+.stats-list-item:nth-child(even){
+  background-color: rgb(57, 166, 209);
 }

@@ -5,17 +5,22 @@ import { v4 as uuidv4 } from 'uuid';
 import { IconContext } from 'react-icons';
 import { GiAfrica } from 'react-icons/gi';
 import Nav from './Nav';
-import { getCountries } from '../redux/countries/countries';
+import { getCountries, getAfrinum } from '../redux/countries/countries';
 
 function BodyList() {
   const countries = useSelector((state) => state.data.countries);
-  // console.log('countries');
-  // console.log(countries);
+  const afriNum = useSelector((state) => state.data.afriNum);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCountries());
   }, []);
+  useEffect(() => {
+    dispatch(getAfrinum());
+  }, []);
+
+  const toStr = (n) => n.toLocaleString();
 
   return (
     <>
@@ -30,7 +35,7 @@ function BodyList() {
         </div>
         <div className="header-text">
           <div><b>AFRICA</b></div>
-          <div>num</div>
+          <div>{toStr(afriNum)}</div>
         </div>
       </header>
       <p className="title">COVID NUMBERS IN AFRICA</p>
@@ -45,7 +50,7 @@ function BodyList() {
               <Link to={`/${country.country}`}>
                 {country.country}
               </Link>
-              <div className="home-cases">{country.cases}</div>
+              <div className="home-cases">{toStr(country.cases)}</div>
             </div>
           </div>
         ))}
