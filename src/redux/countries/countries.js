@@ -16,7 +16,6 @@ export const getCountries = () => async (dispatch) => {
   );
   const bfData = await data.json();
   const newData = bfData.filter((country) => country.continent =='Africa')
-  // const newData = bftrunc.slice(0, 20);
   dispatch({ type: GET_COUNTRIES, newData});
 };
 
