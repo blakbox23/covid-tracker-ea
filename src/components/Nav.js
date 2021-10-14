@@ -9,7 +9,7 @@ function Nav(props) {
   const navCheck = () => {
     if (props.txt == 'Details'){
       return(
-      <Link to="/">
+      <Link to="/" className="back-btn">
       {'<'}
       </Link>)
     }

@@ -40,7 +40,10 @@ export const getCountryData = (country) => async (dispatch) => {
       id: newData.countryInfo.iso3,
       totalcases: newData.cases,  
       recovered: newData.recovered,
+      active: newData.active,
+      critical: newData.critical,
       tests: newData.tests,
+      deaths: newData.deaths
   };
   dispatch({ type: GET_COUNTRY_DATA, countryData});
 };
