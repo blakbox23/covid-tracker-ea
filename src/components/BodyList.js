@@ -1,4 +1,5 @@
-/* eslint react/prop-types: 0 */import React, { useEffect } from 'react';
+/* eslint react/prop-types: 0 */
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
@@ -55,16 +56,6 @@ function BodyList() {
           </div>
         ))}
       </div>
-
-      {/* <ul>
-        {data.countries.map((country) => (
-          <li key={region.id}>
-            <Link to={`/${region.id}`}>
-              {region.name}
-            </Link>
-          </li>
-        ))}
-      </ul>   */}
     </>
   );
 }
