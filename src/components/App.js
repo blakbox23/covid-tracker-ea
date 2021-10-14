@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import BodyList from './BodyList';
 import ItemDescription from './ItemDescription';
 import '../App.css';
+import Info from './Info';
 
 // import Kenya from '../countries/Kenya';
 // import Tanzania from '../countries/Tanzania';
@@ -19,6 +20,9 @@ function App() {
             <ItemDescription country={country.country} />
           </Route>
         ))}
+        <Route exact path="/info">
+          <Info />
+        </Route>
         <Route exact path="/">
           <BodyList />
         </Route>

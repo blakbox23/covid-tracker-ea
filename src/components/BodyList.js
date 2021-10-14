@@ -24,7 +24,7 @@ function BodyList() {
 
   return (
     <>
-      <Nav txt="Home Navbar" />
+      <Nav txt="Home" />
       <header className="header flex">
         <div className="header-img">
           <IconContext.Provider value={{ className: 'africa-img' }}>

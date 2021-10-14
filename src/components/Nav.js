@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function Nav(props) {
 
   const navCheck = () => {
-    if (props.txt == 'Details'){
+    if (props.txt !== 'Home'){
       return(
       <Link to="/" className="back-btn">
       {'<'}
@@ -22,13 +22,13 @@ function Nav(props) {
     <div className = 'navbar flex'>
       <div>{navCheck()}</div>
       <div>Covid in Africa</div>
-      <div className="logo">
+      <Link to="/info" className="logo">
           <IconContext.Provider value={{ className: 'src-logo' }}>
             <div>
               <RiInformationLine />
             </div>
           </IconContext.Provider>
-        </div>
+        </Link>
 
     </div>
   );

@@ -74,7 +74,16 @@ header {
 
 .body-item:nth-child(even) {
     background-color: rgb(122, 194, 223);
+}
 
+.stats-list-item a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.stats-list-item a:hover {
+  color: YELLOW;
+  text-decoration: none;
 }
 
 .body-item-txt {
