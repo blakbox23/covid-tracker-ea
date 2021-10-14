@@ -14,7 +14,19 @@
   padding: 0 3rem;
   background-color: rgb(142, 142, 202);
   color: #fff;
+  font-weight: bold;
+}
 
+.back-btn {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.src-logo {
+  color: #fff;
+  font-size: 1.3rem;
 }
 
 header {
