@@ -17,6 +17,11 @@
   font-weight: bold;
 }
 
+.logo-txt a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .back-btn {
   font-size: 1.3rem;
   font-weight: bold;
@@ -53,7 +58,7 @@ header {
 .title {
   background-color: rgb(36, 129, 167);
   padding: 0.2rem;
-  padding-left: 2rem;;
+  padding-left: 2rem;
   color: #fff;
   font-size: 0.85rem;
   font-weight: bold;
@@ -73,7 +78,7 @@ header {
 }
 
 .body-item:nth-child(even) {
-    background-color: rgb(122, 194, 223);
+  background-color: rgb(122, 194, 223);
 }
 
 .stats-list-item a {
@@ -82,16 +87,16 @@ header {
 }
 
 .stats-list-item a:hover {
-  color: YELLOW;
+  color: yellow;
   text-decoration: none;
 }
 
 .body-item-txt {
   position: relative;
   top: 1rem;
- text-align: right;
- margin-right: 1rem;
-  color:rgb(61, 61, 97);
+  text-align: right;
+  margin-right: 1rem;
+  color: rgb(61, 61, 97);
   letter-spacing: -1.2px;
   text-transform: uppercase;
 }
@@ -112,7 +117,7 @@ header {
   margin-left: 1rem;
 }
 
-.flag img{
+.flag img {
   width: 100%;
   filter: drop-shadow(8px 8px 10px green) opacity(80%);
 }
@@ -127,6 +132,6 @@ header {
   justify-content: space-between;
 }
 
-.stats-list-item:nth-child(even){
+.stats-list-item:nth-child(even) {
   background-color: rgb(57, 166, 209);
 }

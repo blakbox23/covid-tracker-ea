@@ -7,6 +7,24 @@ function Info() {
   return (
     <div className="info-comp">
       <Nav />
+      <header className="header flex">
+        <div className="header-img" />
+        <div className="header-text">
+          <div><b>Info</b></div>
+          More about the app
+        </div>
+      </header>
+      <p className="title">
+        GENERAL
+      </p>
+      <div className="stats-list">
+        <div className="flex stats-list-item">
+          This is published data on the spread of the Covid 19 in Africa.
+        </div>
+        <div className="flex stats-list-item">
+          The API used by this App is updated everyday.
+        </div>
+      </div>
       <p className="title">
         SOURCES
       </p>

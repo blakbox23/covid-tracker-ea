@@ -21,7 +21,9 @@ function Nav(props) {
   return (
     <div className = 'navbar flex'>
       <div>{navCheck()}</div>
-      <div>Covid in Africa</div>
+      <div className="logo-txt"><Link to="/" >
+      {'Covid in Africa'}
+      </Link></div>
       <Link to="/info" className="logo">
           <IconContext.Provider value={{ className: 'src-logo' }}>
             <div>

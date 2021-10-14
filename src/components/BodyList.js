@@ -38,7 +38,7 @@ function BodyList() {
           <div>{toStr(afriNum)}</div>
         </div>
       </header>
-      <p className="title">COVID NUMBERS IN AFRICA</p>
+      <p className="title">TOTAL COVID CASES IN AFRICA</p>
       <div className="body-list flex">
         {countries.map((country) => (
           <div className="body-item" key={uuidv4()}>
