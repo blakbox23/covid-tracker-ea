@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="navbar flex"
+  >
+    <div>
+      <a
+        className="back-btn"
+        href="/"
+        onClick={[Function]}
+      >
+        &lt;
+      </a>
+    </div>
+    <div
+      className="logo-txt"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Covid in Africa
+      </a>
+    </div>
+    <a
+      className="logo"
+      href="/info"
+      onClick={[Function]}
+    >
+      <div>
+        <svg
+          className="src-logo"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"
+            />
+          </g>
+        </svg>
+      </div>
+    </a>
+  </div>
+  <header
+    className="header flex"
+  >
+    <div
+      className="header-img"
+    />
+    <div
+      className="header-text"
+    >
+      <div>
+        <b>
+          Kenya
+        </b>
+      </div>
+    </div>
+  </header>
+  <p
+    className="title"
+  >
+    COVID NUMBERS IN 
+    Kenya
+     
+  </p>
+  <div
+    className="stats-list"
+  >
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Total Cases:
+      </span>
+       
+      <span />
+    </div>
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Recovered:
+      </span>
+       
+      <span />
+    </div>
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Active:
+      </span>
+       
+      <span />
+    </div>
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Critical:
+      </span>
+       
+      <span />
+    </div>
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Tests:
+      </span>
+       
+      <span />
+    </div>
+    <div
+      className="flex stats-list-item"
+    >
+      <span>
+        Deaths:
+      </span>
+       
+      <span />
+    </div>
+  </div>
+</div>
+`;

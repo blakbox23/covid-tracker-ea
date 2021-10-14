@@ -8,8 +8,6 @@ function ItemDescription(props) {
   const country = props.country
   const dispatch = useDispatch();
   const countryStats = useSelector((state) => state.data.countryData);
-  console.log('countryStats')
-  console.log(countryStats)
 
   useEffect(() => {
         dispatch(getCountryData(country));
