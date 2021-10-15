@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { IconContext } from 'react-icons';
 import { GiAfrica } from 'react-icons/gi';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 import { getCountries, getAfrinum } from '../redux/countries/countries';
 
 function BodyList() {

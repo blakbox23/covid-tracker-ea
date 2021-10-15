@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountryData } from '../redux/countries/countries';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 
 function ItemDescription(props) {
   const country = props.country
