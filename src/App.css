@@ -17,7 +17,7 @@
   font-weight: bold;
 }
 
-.logo-txt a{
+.logo-txt a {
   color: #fff;
   text-decoration: none;
 }
@@ -86,11 +86,6 @@ header {
   text-decoration: none;
 }
 
-.stats-list-item a:hover {
-  color: yellow;
-  text-decoration: none;
-}
-
 .body-item-txt {
   position: relative;
   top: 1rem;
@@ -105,6 +100,11 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
+}
+
+.stats-list-item a:hover {
+  color: yellow;
+  text-decoration: none;
 }
 
 .home-cases {
