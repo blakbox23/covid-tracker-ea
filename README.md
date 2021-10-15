@@ -46,7 +46,7 @@ To run tests, run `npm test`
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/blakbox23/bookstore/issues).
+Feel free to check the [issues page](https://github.com/blakbox23/covid-tracker-ea/issues).
 
 ## Show your support
 
