@@ -74,12 +74,13 @@ header {
 .body-item {
   width: calc(50% - 2px);
   height: 11rem;
-  border: 1px solid rgb(187, 186, 186);
 }
 
-.body-item:nth-child(even) {
+.body-item:nth-child(4n+1),
+.body-item:nth-child(4n+4){
   background-color: rgb(122, 194, 223);
 }
+
 
 .stats-list-item a {
   color: #fff;

@@ -2,7 +2,7 @@
 
 This is a React and Redux project that shows the updated covid 19 numbers in Africa. It shows the total cases in the entire continent, and more metrics per each country in Africa. It fetches data from the [Diseases.sh API](https://disease.sh/) which is updated on a daily basis. 
 
- ![Home](./src/assets/Home.png) ![Details](./src/assets/Details.png)
+ ![Home](./src/assets/Capture.PNG) ![Details](./src/assets/Details.png)
 
 
 ## Built With
