@@ -5,9 +5,6 @@ import ItemDescription from './ItemDescription';
 import '../App.css';
 import Info from './Info';
 
-// import Kenya from '../countries/Kenya';
-// import Tanzania from '../countries/Tanzania';
-
 function App() {
   const countries = useSelector((state) => state.data.countries);
 
