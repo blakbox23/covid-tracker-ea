@@ -52,11 +52,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- Flat icons
-- [Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
-- etc
+- [Flat icons](www.flaticon.com)
+- [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design
+- Collegues at Microverse
 
 ## 📝 License
 
