@@ -2,10 +2,7 @@
 
 This is a React and Redux project that shows the updated covid 19 numbers in Africa. It shows the total cases in the entire continent, and more metrics per each country in Africa. It fetches data from the [Diseases.sh API](https://disease.sh/) which is updated on a daily basis. 
 
- ![Home](./src/assets/Home.png)
- ![Details](./src/assets/Details.png)
-
-
+ ![Home](./src/assets/Home.png) ![Details](./src/assets/Details.png)
 
 
 ## Built With
@@ -26,10 +23,10 @@ To get a local copy up and running follow these simple example steps.
 `npm install`
 
 
-### Usage
+## Usage
 To run the app in your machine, run `npm start`
 
-### Testing
+## Testing
 This project tests each component as well as data in the redux store.
 To run tests, run `npm test`
 
