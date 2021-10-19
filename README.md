@@ -11,8 +11,8 @@ This is a React and Redux project that shows the updated covid 19 numbers in Afr
 - Redux
 - [Disease.sh API](https://disease.sh/)
 
-## Live
-[Live link](https://wonderful-noether-72e742.netlify.app/)
+<!-- ## Live
+[Live link](https://wonderful-noether-72e742.netlify.app/) -->
 
 ## Getting Started
 
