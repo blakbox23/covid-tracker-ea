@@ -48,29 +48,31 @@ export const getCountryData = (country) => async (dispatch) => {
   dispatch({ type: GET_COUNTRY_DATA, countryData });
 };
 
-export const getGraphData = () => async (dispatch) => {
-  const graphData = await [9, 3, 4, 6, 7, 9];
+// export const getGraphData = () => async (dispatch) => {
+//   const graphData = await [9, 3, 4, 6, 7, 9];
+
+//   dispatch({ type: GET_GRAPH_DATA, graphData });
+// };
+
+export const getGraphData = (country) => async (dispatch) => {
+  const graphData = [];
+  const today = new Date();
+  const startingDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate() - 7}`;
+  const currentDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate() - 1}`;
+  const request = await fetch(`https://api.covid19tracking.narrativa.com/api/country/${country}?date_from=${startingDate}&date_to=${currentDate}`);
+  const data = await request.json();
+  const dataDates = data.dates;
+
+  Object.keys(dataDates).forEach((date) => {
+    const point = dataDates[date].countries[country].today_confirmed;
+    graphData.push(point);
+    console.log(dataDates[date].countries[country].today_confirmed);
+    return graphData;
+  });
+  console.log(graphData);
 
   dispatch({ type: GET_GRAPH_DATA, graphData });
 };
-
-// export const getGraphData = (country) => async (dispatch) => {
-//   const data = await fetch(
-//     `https://disease.sh/v3/covid-19/countries/${country}`,
-//     { method: 'GET' },
-//   );
-//   const newData = await data.json();
-//   const graphData = {
-//     id: newData.countryInfo.iso2,
-//     totalcases: newData.cases,
-//     recovered: newData.recovered,
-//     active: newData.active,
-//     critical: newData.critical,
-//     tests: newData.tests,
-//     deaths: newData.deaths,
-//   };
-//   dispatch({ type: GET_GRAPH_DATA, graphData });
-// };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

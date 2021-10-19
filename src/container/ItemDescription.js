@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountryData } from '../redux/countries/countries';
+import { Link } from 'react-router-dom';
+
 import Nav from '../components/Nav';
 
 function ItemDescription(props) {
@@ -33,7 +35,10 @@ function ItemDescription(props) {
       <p className="title">COVID NUMBERS IN {country} </p>
 
       <div className="stats-list">
-      <div className="flex stats-list-item" ><span>Total Cases:</span> <span>{(countryStats.totalcases)}</span></div>
+      <Link to={`/${country}/totalcases`}>
+      <div className="flex stats-list-item"><span>Total Cases:</span> <span>{(countryStats.totalcases)}</span></div>
+      </Link>
+
       <div className="flex stats-list-item" ><span>Recovered:</span> <span>{(countryStats.recovered)}</span></div>
       <div className="flex stats-list-item" ><span>Active:</span> <span>{(countryStats.active)}</span></div>
       <div className="flex stats-list-item" ><span>Critical:</span> <span>{(countryStats.critical)}</span></div>

@@ -4,6 +4,7 @@ import BodyList from './container/BodyList';
 import ItemDescription from './container/ItemDescription';
 import './App.css';
 import Info from './components/Info';
+import Graph from './components/Graph';
 
 function App() {
   const countries = useSelector((state) => state.data.countries);
@@ -17,6 +18,13 @@ function App() {
             <ItemDescription country={country.country} />
           </Route>
         ))}
+
+        {countries.map((country) => (
+          <Route exact path={`/${country.country}/totalcases`} key={country}>
+            <Graph country={country.country} />
+          </Route>
+        ))}
+
         <Route exact path="/info">
           <Info />
         </Route>
