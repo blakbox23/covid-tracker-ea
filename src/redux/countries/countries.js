@@ -11,7 +11,7 @@ const initialState = {
 
 export const getCountries = () => async (dispatch) => {
   const data = await fetch(
-    `https://corona.lmao.ninja/v2/countries?today=&sort=`,
+    'https://disease.sh/v3/covid-19/countries',
     { method: 'GET' },
   );
   const bfData = await data.json();
