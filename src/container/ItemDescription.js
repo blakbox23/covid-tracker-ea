@@ -8,8 +8,8 @@ function ItemDescription(props) {
   const country = props.country
   const dispatch = useDispatch();
   const countryStats = useSelector((state) => state.data.countryData);
-  console.log("iso");
-  // console.log(iso);
+  // console.log("Country stats");
+  // console.log(countryStats);
 
   useEffect(() => {
         dispatch(getCountryData(country));
@@ -20,7 +20,8 @@ function ItemDescription(props) {
       <Nav txt={'Details'}/>
     <header className="header flex">
         <div className="header-img">
-        <img className="map" src= {`https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/${countryStats.id.toLowerCase()}/vector.svg`} ></img>
+        {/* <img className="map" src= {`https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/${countryStats.id.toLowerCase()}/vector.svg`} ></img> */}
+        {/* {countryStats.id.toLowerCase()} */}
         </div>
         <div className="header-text">
           <div><b>{country}</b></div>
