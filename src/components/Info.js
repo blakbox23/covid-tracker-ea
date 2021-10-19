@@ -2,6 +2,7 @@ import React from 'react';
 import { VscGithub } from 'react-icons/vsc';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import Nav from './Nav';
+import Graph from './Graph';
 
 function Info() {
   return (
@@ -57,6 +58,8 @@ function Info() {
           </span>
         </div>
       </div>
+      <Graph />
+
     </div>
   );
 }

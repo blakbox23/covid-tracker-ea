@@ -1,11 +1,13 @@
 export const GET_COUNTRIES = 'countries/countries/GET_COUNTRIES';
 export const GET_COUNTRY_DATA = 'countries/countries/GET_COUNTRY_DATA';
 export const GET_AFRINUM = 'countries/countries/GET_AFRINUM';
+export const GET_GRAPH_DATA = 'countries/countries/GET_GRAPH_DATA';
 
 const initialState = {
   countries: [],
   countryData: [],
   afriNum: [],
+  graphData: [],
 };
 
 export const getCountries = () => async (dispatch) => {
@@ -46,6 +48,30 @@ export const getCountryData = (country) => async (dispatch) => {
   dispatch({ type: GET_COUNTRY_DATA, countryData });
 };
 
+export const getGraphData = () => async (dispatch) => {
+  const graphData = await [9, 3, 4, 6, 7, 9];
+
+  dispatch({ type: GET_GRAPH_DATA, graphData });
+};
+
+// export const getGraphData = (country) => async (dispatch) => {
+//   const data = await fetch(
+//     `https://disease.sh/v3/covid-19/countries/${country}`,
+//     { method: 'GET' },
+//   );
+//   const newData = await data.json();
+//   const graphData = {
+//     id: newData.countryInfo.iso2,
+//     totalcases: newData.cases,
+//     recovered: newData.recovered,
+//     active: newData.active,
+//     critical: newData.critical,
+//     tests: newData.tests,
+//     deaths: newData.deaths,
+//   };
+//   dispatch({ type: GET_GRAPH_DATA, graphData });
+// };
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_COUNTRIES:
@@ -56,6 +82,9 @@ const reducer = (state = initialState, action) => {
 
     case GET_COUNTRY_DATA:
       return { ...state, countryData: action.countryData };
+
+    case GET_GRAPH_DATA:
+      return { ...state, graphData: action.graphData };
 
     default:
       return state;
