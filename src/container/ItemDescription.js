@@ -2,6 +2,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountryData } from '../redux/countries/countries';
+
+import { Link } from 'react-router-dom';
+
 import Nav from '../components/Nav';
 
 function ItemDescription(props) {
@@ -9,6 +12,7 @@ function ItemDescription(props) {
   const dispatch = useDispatch();
   const countryStats = useSelector((state) => state.data.countryData);
   const iso2 = countryStats.id.toLowerCase();
+
 
   useEffect(() => {
         dispatch(getCountryData(country));
@@ -19,8 +23,9 @@ function ItemDescription(props) {
       <Nav txt={'Details'}/>
     <header className="header flex">
         <div className="header-img">
-            <img className="map" src={`https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/${iso2}.toLowerCase()}/vector.svg`}></img>
 
+        {/* <img className="map" src= {`https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/${countryStats.id.toLowerCase()}/vector.svg`} ></img> */}
+        {/* {countryStats.id.toLowerCase()} */}
         </div>
         <div className="header-text">
           <div><b>{country}</b></div>
@@ -32,7 +37,10 @@ function ItemDescription(props) {
       <p className="title">COVID NUMBERS IN {country} </p>
 
       <div className="stats-list">
-      <div className="flex stats-list-item" ><span>Total Cases:</span> <span>{(countryStats.totalcases)}</span></div>
+      <Link to={`/${country}/totalcases`}>
+      <div className="flex stats-list-item"><span>Total Cases:</span> <span>{(countryStats.totalcases)}</span></div>
+      </Link>
+
       <div className="flex stats-list-item" ><span>Recovered:</span> <span>{(countryStats.recovered)}</span></div>
       <div className="flex stats-list-item" ><span>Active:</span> <span>{(countryStats.active)}</span></div>
       <div className="flex stats-list-item" ><span>Critical:</span> <span>{(countryStats.critical)}</span></div>

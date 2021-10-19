@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Covid Tracking in Africa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React and Redux project that shows the updated covid 19 numbers in Africa. It shows the total cases in the entire continent, and more metrics per each country in Africa. It fetches data from the [Diseases.sh API](https://disease.sh/) which is updated on a daily basis. 
 
-## Available Scripts
+![Screenshot](./src/assets/proj.png)
 
-In the project directory, you can run:
 
-### `yarn start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
+- Redux
+- [Disease.sh API](https://disease.sh/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live
+[Live link](https://wonderful-noether-72e742.netlify.app/)
 
-### `yarn test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running follow these simple example steps.
+- Clone the repository with:
+`git clone https://github.com/blakbox23/covid-tracker-ea.git`
 
-### `yarn build`
+- Install dependencies by running:
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+To run the app in your machine, run `npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Testing
+This project tests each component as well as data in the redux store.
+To run tests, run `npm test`
 
-### `yarn eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+👤 **Peter Mbuthia**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@Blakbox23](https://github.com/blakbox23)
+- Twitter: [@blakbox23](https://twitter.com/blakbox23)
+- LinkedIn: [Peter Mbuthia](https://www.linkedin.com/in/peter-mbuthia)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🤝 Contributing
 
-## Learn More
+Contributions, issues, and feature requests are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to check the [issues page](https://github.com/blakbox23/covid-tracker-ea/issues).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
 
-### Code Splitting
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgments
 
-### Analyzing the Bundle Size
+- [Flat icons](www.flaticon.com)
+- [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design
+- Collegues at Microverse
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.

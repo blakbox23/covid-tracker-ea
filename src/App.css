@@ -17,7 +17,7 @@
   font-weight: bold;
 }
 
-.logo-txt a{
+.logo-txt a {
   color: #fff;
   text-decoration: none;
 }
@@ -50,6 +50,13 @@ header {
   width: 40%;
 }
 
+.map {
+  width: 100%;
+  height: 100%;
+  filter: invert(45%);
+  opacity: 50%;
+}
+
 .header-text {
   width: 40%;
   padding-top: 4rem;
@@ -74,20 +81,15 @@ header {
 .body-item {
   width: calc(50% - 2px);
   height: 11rem;
-  border: 1px solid rgb(187, 186, 186);
 }
 
-.body-item:nth-child(even) {
+.body-item:nth-child(4n+1),
+.body-item:nth-child(4n+4) {
   background-color: rgb(122, 194, 223);
 }
 
 .stats-list-item a {
   color: #fff;
-  text-decoration: none;
-}
-
-.stats-list-item a:hover {
-  color: yellow;
   text-decoration: none;
 }
 
@@ -105,6 +107,11 @@ header {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
+}
+
+.stats-list-item a:hover {
+  color: yellow;
+  text-decoration: none;
 }
 
 .home-cases {
@@ -134,4 +141,8 @@ header {
 
 .stats-list-item:nth-child(even) {
   background-color: rgb(57, 166, 209);
+}
+
+.graph-section {
+  background-color:rgb(57, 166, 209);
 }
