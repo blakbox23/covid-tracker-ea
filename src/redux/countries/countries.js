@@ -35,7 +35,7 @@ export const getCountryData = (country) => async (dispatch) => {
   );
   const newData = await data.json();
   const countryData = {
-    id: newData.countryInfo.iso3,
+    id: newData.countryInfo.iso2,
     totalcases: newData.cases,
     recovered: newData.recovered,
     active: newData.active,

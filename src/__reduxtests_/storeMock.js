@@ -10,7 +10,7 @@ const data = [
       active: 58571,
       critical: 11,
       deaths: 5862,
-      id: 'DZA',
+      id: 'DZ',
       recovered: 140467,
       tests: 230861,
       totalcases: 204900,

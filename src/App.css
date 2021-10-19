@@ -50,6 +50,12 @@ header {
   width: 40%;
 }
 
+.map {
+  width: 100%;
+  height: 100%;
+  filter: invert(85%)
+}
+
 .header-text {
   width: 40%;
   padding-top: 4rem;
