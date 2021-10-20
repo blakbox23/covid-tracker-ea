@@ -88,9 +88,13 @@ header {
   background-color: rgb(122, 194, 223);
 }
 
-.stats-list-item a {
+.stats-list-item a, .graphbutton, .stats-list a{
   color: #fff;
   text-decoration: none;
+}
+
+.graphbutton {
+  font-weight: bold;
 }
 
 .body-item-txt {

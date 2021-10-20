@@ -71,11 +71,11 @@ useEffect(() => {
         <div className="header-img" />
         <div className="header-text">
           <div><b>Graph</b></div>
-          the line graph
+          open cases visual representation
         </div>
       </header>
 
-      <p className="title">`TOTAL CASES IN KENYA IN THE LAST 7 DAYS` </p>
+      <p className="title">`TOTAL CASES IN {props.country} IN THE LAST 7 DAYS` </p>
       <Line data={data} options={options} />
     </div>
   );

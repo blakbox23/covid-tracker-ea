@@ -64,12 +64,12 @@ export const getGraphData = (country) => async (dispatch) => {
   const dataDates = data.dates;
 
   Object.keys(dataDates).forEach((date) => {
-    const point = dataDates[date].countries[country].today_confirmed;
+    const point = dataDates[date].countries[country].today_open_cases;
     graphData.push(point);
-    console.log(dataDates[date].countries[country].today_confirmed);
+    // console.log(dataDates[date].countries[country].today_confirmed);
     return graphData;
   });
-  console.log(graphData);
+  // console.log(graphData);
 
   dispatch({ type: GET_GRAPH_DATA, graphData });
 };

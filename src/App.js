@@ -20,9 +20,10 @@ function App() {
         ))}
 
         {countries.map((country) => (
-          <Route exact path={`/${country.country}/totalcases`} key={country}>
+          <Route exact path={`/${country.country}/opencases`} key={country}>
             <Graph country={country.country} />
           </Route>
+
         ))}
 
         <Route exact path="/info">
