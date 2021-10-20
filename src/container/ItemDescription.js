@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountryData } from '../redux/countries/countries';
+
 import { Link } from 'react-router-dom';
 import { IoIosPodium } from 'react-icons/io';
 
@@ -11,7 +12,7 @@ function ItemDescription(props) {
   const country = props.country
   const dispatch = useDispatch();
   const countryStats = useSelector((state) => state.data.countryData);
- 
+
   useEffect(() => {
         dispatch(getCountryData(country));
       }, []);
@@ -21,6 +22,7 @@ function ItemDescription(props) {
       <Nav txt={'Details'}/>
     <header className="header flex">
         <div className="header-img">
+
         </div>
         <div className="header-text">
           <div><b>{country}</b></div>
