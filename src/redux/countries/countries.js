@@ -69,7 +69,7 @@ export const getGraphData = (country) => async (dispatch) => {
     // console.log(dataDates[date].countries[country].today_confirmed);
     return graphData;
   });
-  console.log(graphData);
+  // console.log(graphData);
 
   dispatch({ type: GET_GRAPH_DATA, graphData });
 };
