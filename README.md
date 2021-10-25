@@ -53,7 +53,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - [Flat icons](www.flaticon.com)
-- [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design
+- [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) for the design inspirqtion
 - Collegues at Microverse
 
 ## 📝 License
